@@ -6,7 +6,7 @@
 #    By: vvalenti <vvalenti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/12 15:33:42 by vvalenti          #+#    #+#              #
-#    Updated: 2026/05/19 17:44:25 by vvalenti         ###   ########.fr        #
+#    Updated: 2026/05/20 17:18:22 by vvalenti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ RUN apt-get update && apt install -y \
 RUN wget https://fr.wordpress.org/wordpress-6.9-fr_FR.tar.gz -P /var/www && \
 	cd /var/www && tar -xzf wordpress-6.9-fr_FR.tar.gz && rm wordpress-6.9-fr_FR.tar.gz
 	
-RUN chown -R root:root /var/www/wordpress
+RUN chown www-data:www-data /var/www/wordpress
 
 RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 RUN chmod +x wp-cli.phar

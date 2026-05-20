@@ -6,13 +6,13 @@
 #    By: vvalenti <vvalenti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/12 15:33:37 by vvalenti          #+#    #+#              #
-#    Updated: 2026/05/19 16:39:12 by vvalenti         ###   ########.fr        #
+#    Updated: 2026/05/20 17:50:15 by vvalenti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FROM debian:bookworm
 
-RUN apt update -y && apt upgrade -y \
+RUN apt update -y \
 	&& apt install vim -y \
 	&& apt-get install mariadb-server -y
 
@@ -21,4 +21,5 @@ COPY conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 
 RUN chmod +x /mariadb.sh
 
-CMD ["mysqld_safe"]
+
+CMD ["bash", "/mariadb.sh"]
