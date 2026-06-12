@@ -35,8 +35,8 @@ if [ ! -d "/var/lib/mysql/${SQL_DATABASE}" ]; then
 	echo "Setting root password..."
 	mariadb -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '${SQL_ROOT_PASSWORD}';"
 
-	echo "Flushing privileges..."
-	mariadb -e "FLUSH PRIVILEGES;"
+	#echo "Flushing privileges..."
+	#mariadb -uroot -p${SQL_ROOT_PASSWORD} -e "FLUSH PRIVILEGES;"
 
 	echo "MariaDB initialization done!"
 
