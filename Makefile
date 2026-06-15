@@ -6,13 +6,13 @@
 #    By: vvalenti <vvalenti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/29 13:55:03 by vvalenti          #+#    #+#              #
-#    Updated: 2026/06/12 16:22:22 by vvalenti         ###   ########.fr        #
+#    Updated: 2026/06/15 16:59:56 by vvalenti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = inception
 
-COMPOSE = docker compose -f docker-compose.yml
+COMPOSE = docker compose -f srcs/docker-compose.yml
 
 all: up
 
